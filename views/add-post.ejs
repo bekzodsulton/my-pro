@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+
+<body>
+	
+	<%- include('./partials/nav.ejs') %>
+
+	<form id="contact-form" method="post" action="/add-post">
+		<div class="form-info">
+			<div class="title-post">
+			<label for="title">Заголовок поста</label>
+			<input type="text" name="title" id="title" required>
+		</div>
+
+		<div class="author-post">
+			<label for="text">Автор</label>
+			<input type="text" name="author" id="text" required>
+		</div>
+		</div>
+
+		<div class="form-text">
+			<label for="text">Текст поста</label>
+			<textarea name="text" id="text" required></textarea>
+		</div>
+
+		<div class="form-button">
+			<button type="submit">Добавить пост</button>
+		</div>
+
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+
+<body>
+	
+	<%- include('./partials/nav.ejs') %>
+
+	<form id="post-form" method="POST" action="/posts/<%= post.id %>?_method=PUT">
+		<div class="form-info">
+			<div class="title-post">
+			<label >Заголовок поста
+			<input type="text" name="title"  value="<%= post.title %>" required>
+		</label>
+		</div>
+
+		<div class="author-post">
+			<label >Автор
+			<input type="text" name="author"  value="<%= post.author %>" required>
+		</label>
+		</div>
+		</div>
+
+		<div class="form-text">
+			<label >Текст поста
+			<textarea name="text" required><%= post.text %></textarea>
+		</label>
+		</div>
+
+		<div class="form-button">
+			<button type="submit">Добавить пост</button>
+		</div>
+
+	</form>
+</body>
+
+</html>
